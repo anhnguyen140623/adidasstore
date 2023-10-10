@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <title>Adidas</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="header-text" id="headerText"></span>
+        </div>
+    </header>
+    <header class="main-header">
+        <div class="left-section">
+            <img src="data:image/png;base64,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"
+                alt="Adidas Logo" class="logo">
+        </div>
+
+        <div class="center-section">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">WOMAN</a></li>
+                    <li><a href="#">KIDS</a></li>
+                    <li><a href="#">SPORTS</a></li>
+                    <li><a href="#">SALE</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right-section">
+            <div class="search">
+
+                <input type="text" class="search-input">
+
+                <div class="icon">
+                    <box-icon name='search-alt'></box-icon>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <box-icon name='cart'></box-icon>
+            </div>
+            <div class="login-icon">
+                <box-icon name='user-circle'></box-icon>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <div class="sub-header">
+        <!-- Subheader content here -->
+    </div>
+
+
+
+
+
+
+
+
+    <section class="hero">
+        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/xcat-fw23-fleece-glp-mh-lg-m-d_tcm221-1067739.jpg"
+            alt="Background Image" class="hero-image">
+        <div class="hero-content">
+            <div class="content-text">
+                NEW FLEECE FOR FALL
+
+            </div>
+            <div class="content-texts">
+                <p>Cozy hoodies, crewnecks and sweatpants combine comfort and style.</p>
+
+            </div>
+
+            <button class="shop-button">SHOP NOW</button>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="navigation">
+        <span>&#8592;</span>
+        <a href="#">BACK</a>
+
+        <a href="#">Home</a>
+        <span>/</span>
+        <a href="#">Men</a>
+        <span>/</span>
+        <a href="#">Shoes</a>
+    </div>
+
+    <div class="ms">
+        <i>MEN'S SHOES</i>
+
+    </div>
+    <div class="mt">
+        <p>Shop adidas for all styles of men's shoes including casual sneakers, high-performance running shoes,</p>
+        <p> and comfy slides. Browse styles for women and kids here.</p>
+    </div>
+    <div class="product-navigation">
+        <ul>
+            <li class="nav-item active" onclick="changeActive(this)">All Men's Shoes</li>
+            <li class="nav-item" onclick="changeActive(this)">Sneakers</li>
+            <li class="nav-item" onclick="changeActive(this)">Running</li>
+            <li class="nav-item" onclick="changeActive(this)">Soccer</li>
+            <li class="nav-item" onclick="changeActive(this)">Basketball</li>
+            <li class="nav-item" onclick="changeActive(this)">Lifestyle</li>
+        </ul>
+
+    </div>
+
+
+
+    <button class="filter-button" onclick="toggleFilterPanel()">Filter & Sort</button>
+
+    <div class="filter-panel" id="filterPanel">
+        <div class="filter-content">
+            <div class="filter-header">
+                <h2>Filter and Sort</h2>
+                <span class="clear-all" onclick="clearAllFilters()">Clear All</span>
+                <span class="close-button" onclick="closeFilterPanel()">
+                    <box-icon name='x-circle'></box-icon>
+                </span>
+            </div>
+            <div class="filter-options">
+                <div class="filter-item">
+                    <span class="filter-title">Sort by</span>
+                    <span class="filter-arrower" onclick="toggleSortOptions()">&#9660;</span>
+                    <div class="sort-options" style="display: none;">
+                        <div class="sort-option" onclick="selectSortOption(this)">Newest</div>
+                        <div class="sort-option" onclick="selectSortOption(this)">Price (High-low)</div>
+                        <div class="sort-option" onclick="selectSortOption(this)">Price (Low-high)</div>
+                        <div class="sort-option" onclick="selectSortOption(this)">Top Sellers</div>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <span class="filter-title">Size</span>
+                    <span class="filter-arrow" onclick="toggleSizeTable()">&#9660;</span>
+                </div>
+                <div class="size-table" id="sizeTable" style="display: none;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td onclick="selectSize(this)">3</td>
+                                <td onclick="selectSize(this)">3.5</td>
+                                <td onclick="selectSize(this)">4</td>
+                                <td onclick="selectSize(this)">4.5</td>
+                                <td onclick="selectSize(this)">5</td>
+                            </tr>
+                            <tr>
+                                <td onclick="selectSize(this)">6</td>
+                                <td onclick="selectSize(this)">6.5</td>
+                                <td onclick="selectSize(this)">7</td>
+                                <td onclick="selectSize(this)">7.5</td>
+                                <td onclick="selectSize(this)">8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="filter-item">
+                    <span class="filter-title">Color</span>
+                    <span class="filter-arrow" onclick="toggleColorTable(this)">&#9660;</span>
+                </div>
+                <div class="color-table" id="colorTable">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="color-item" style="background-color: blue;"></td>
+                                <td class="color-item" style="background-color: red;"></td>
+                                <td class="color-item" style="background-color: black;"></td>
+                                <td class="color-item" style="background-color: white;"></td>
+                                <td class="color-item" style="background-color: yellow;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="filter-item">
+                    <span class="filter-title">Brand</span>
+                    <span class="filter-arrowing" onclick="toggleBrandOptions()">&#9660;</span>
+                    <div class="brand-options" style="display: none;">
+                        <div class="brand-option">
+                            <input type="checkbox" id="perfomance"> <!-- Ô chọn -->
+                            <label for="perfomance">Performance</label>
+                        </div>
+                        <div class="brand-option">
+                            <input type="checkbox" id="sportwear"> <!-- Ô chọn -->
+                            <label for="sportwear">Sport Wear</label>
+                        </div>
+                        <div class="brand-option">
+                            <input type="checkbox" id="original"> <!-- Ô chọn -->
+                            <label for="original">Original</label>
+                        </div>
+                        <div class="brand-option">
+                            <input type="checkbox" id="essential"> <!-- Ô chọn -->
+                            <label for="essential">Essential</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button class="apply-button" onclick="applyFilters()">Apply</button>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="product-container">
+        <div class="product">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7ed0855435194229a525aad6009a0497_9366/Superstar_Shoes_White_EG4958_01_standard.jpg" alt="Sản phẩm 1">
+
+            <div class="overlay">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d3c609326e3848249403dbb3d63c0433_9366/Superstar_XLG_Shoes_White_IF9995_02_standard_hover.jpg" alt="Ảnh khi hover">
+                
+            </div>
+            <p>Tên sản phẩm 1</p>
+            <p>Giá sản phẩm 1</p>
+        </div>
+        
+        <div class="product">
+            <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c608f554cb3b4d12b392af000188c513_9366/Ultraboost_1.0_Shoes_Black_HQ4199_01_standard.jpg" alt="Sản phẩm 1">
+
+            <div class="overlay">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/333d70cd5438497e8171af4501038746_9366/Ultraboost_1.0_Shoes_Black_HQ4199_010_hover_standard.jpg" alt="Ảnh khi hover">
+                
+            </div>
+            <p>Tên sản phẩm 1</p>
+            <p>Giá sản phẩm 1</p>
+        </div>
+        <div class="product">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/10903d1e03e548b7a8a74b52c933dd22_9366/TERREX_SOULSTRIDE_R.RDY_Black_IE7636_HM1.jpg" alt="Sản phẩm 1">
+
+            <div class="overlay">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/389e1963476c41c39dd326d888cc80ec_9366/TERREX_SOULSTRIDE_R.RDY_Black_IE7636_HM3_hover.jpg" alt="Ảnh khi hover">
+                
+            </div>
+            <p>Tên sản phẩm 1</p>
+            <p>Giá sản phẩm 1</p>
+        </div>
+        <div class="product">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0643354eec9945edb92c800a064146ab_9366/Gazelle_Indoor_Shoes_Burgundy_IG4996_01_standard.jpg" alt="Sản phẩm 1">
+
+            <div class="overlay">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5b447865fa5c44e48c2a5ed371cf7846_9366/Gazelle_Indoor_Shoes_Burgundy_IG4996_010_hover_standard.jpg" alt="Ảnh khi hover">
+                
+            </div>
+            <p>Tên sản phẩm 1</p>
+            <p>Giá sản phẩm 1</p>
+        </div>
+        <div class="product">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/99d39e7e350840bc92271b459f993a3f_9366/Pureboost_23_Running_Shoes_White_IF2379_HM1.jpg" alt="Sản phẩm 1">
+
+            <div class="overlay">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4b77e4b6ab0449fcbbf100a61f49d0f1_9366/Pureboost_23_Running_Shoes_White_IF2379_HM4.jpg" alt="Ảnh khi hover">
+                
+            </div>
+            <p>Tên sản phẩm 1</p>
+            <p>Giá sản phẩm 1</p>
+        </div>
+    </div>
+
+    <div id="content-container">
+        <div id="content">
+            Page
+            <div class="dropdown">
+                <div class="dropdown-item" id="selected-item">1</div>
+                <div class="dropdown-content">
+                    <div class="dropdown-item" onclick="selectNumber(1)">1</div>
+                    <div class="dropdown-item" onclick="selectNumber(2)">2</div>
+                    <div class="dropdown-item" onclick="selectNumber(3)">3</div>
+                    <div class="dropdown-item" onclick="selectNumber(4)">4</div>
+                    <div class="dropdown-item" onclick="selectNumber(5)">5</div>
+                </div>
+            </div>
+        
+            of 5
+        </div>
+    </div>
+
+
+    <div class="text">
+        <b>Recently views </b>
+    </div>
+
+    <div class="product-carousels newArrivalsCarousel">
+        <div class="carousel-wrappers">
+            <div class="carousels">
+                <!-- Các sản phẩm New Arrivals -->
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/763fb5a2d82d448ca62baf4600f657c6_9366/gazelle-bold-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Originals Black Gazelle Bold Shoes</p>
+                        <p>120$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/c60cd4a11b6945599e15a81a017fb25f_9366/samba-classic.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Soccer Black Samba Classic</p>
+                        <p>110$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a427031e5b304e839458bc01c935d262_9366/adifom-stan-smith-mule-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Women's Originals Turquoise Adifom</p>
+                        <p>100$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/97f86eede1374615a058a81700a27444_9366/gazelle-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Originals Black Gazelle Shoes</p>
+                        <p>120$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/883a6bdaeb7b4e708219afd2010a0f52_9366/samba-decon-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Originals Black Samba Decon Shoes</p>
+                        <p>150$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7b283df1eb6c4c9ab4a3afb200f9876a_9366/samba-og-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Originals Black Samba ADV Shoes</p>
+                        <p>120$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f2d7904df0984880a82cadc8018a5db4_9366/samba-adv-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Originals White Samba OG Shoes</p>
+                        <p>100$</p>
+                    </div>
+                </div>
+                <div class="productss">
+                    <img src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a34f007a106043afb2f3afab00e997ee_9366/samba-og-shoes.jpg"
+                        alt="Product 1">
+
+                    <div class="product-details">
+                        <p>Originals White Samba OG Shoes</p>
+                        <p>120$</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+     
+    </div>
+
+<div class="texts">
+
+    <p><strong>ADIDAS MEN’S SHOES</strong><br>
+        Step up your game in <strong>adidas men’s shoes</strong> that help you strut your stuff on and off the court. No matter what you’re doing, comfort is key to enjoying yourself and performing your best. Plush cushioning for every step keeps you moving whether you’re on a fast break or racing to a meeting. <strong>Adidas men’s sneakers</strong> have soft and responsive Boost cushioning, returning energy to your stride. The more you give and the harder you go, the more you get back. Stay fast and agile on your feet with lightweight materials. When you need to change direction quickly to lose a defender, shoe uppers support your feet as you push off. Set new PRs from your morning runs to major marathons, weight training to gym sessions. <strong>Adidas sports shoes for men</strong> help you perform your best and are designed to meet the demands of each unique sport. On the basketball court, soccer fields, race tracks and beyond, lace up shoes like the Dame 7, Copa Sense, Freak Ghost and more to raise your level. After your game, slip into relaxed men’s slides to get your recovery started. Off the field, <strong>adidas has men’s sneakers</strong> for your everyday life. Whether you prefer the modern athletic vibes of the NMD or Ultraboost or timeless looks like the Stan Smith and Superstar, start from the ground up to express your creative style. Unlimited colors, graphics, and styles offer everything you need to make your mark. Browse <strong>adidas for men’s trainers, sneakers and more</strong> to step through your day in confidence and style.</p>
+        
+        <p><strong>When there are so many attractive men's adidas sneakers available</strong>, it is often difficult to choose your preferred pair because there are so many options. Whatever you choose, you can rest assured that you will be able to find the most up-to-date <strong>adidas sneakers for men</strong> that are suitable for your style. It's a veritable feast of different styles, each of which is designed with functionality, fashion, and performance in mind. If you want to inject a fresh wave of vitality into your footwear collection, look for styles that have interesting color mixes, innovative details, traditional silhouettes, and bold graphics. With <strong>adidas men’s shoes</strong>, you are all set to deliver your finest performance thanks to your signature style and cutting-edge technologies that boost comfort and support in a wide range of environments. When you have <strong>adidas casual leather shoes</strong> that amp up your look, you can always locate a great fit for whatever the day may bring.</p>
+        
+        <p><strong>HOW TO LACE YOUR SHOES</strong><br>
+        Learn more about how to lace your shoes properly and all the different techniques that can help you get the most comfort and functionality out of your shoes. Find our <strong>How To Lace Your Shoes</strong> library here.</p>
+        
+        <p><strong>HOW TO CLEAN YOUR SHOES</strong><br>
+        Shoes get dirty. Unfortunately, there is just no way of getting around that. However, there is something you can do about it. Follow these easy steps to help you keep your shoes looking brand new.</p>
+        
+        <p><strong>HOW TO PREVENT CHAFING</strong><br>
+        Even the most seasoned runner needs to be prepared for the unknown and the last thing you want after a tough run is chafe. Check out our tips on <strong>How to Prevent Chafing</strong> to help you stay on the go whether it be on your usual route or running a marathon!</p>
+        
+        <p><strong>WHAT TO WEAR FOR TENNIS</strong><br>
+        Curious to know what you should wear to play tennis? Read more in our <strong>What To Wear For Tennis</strong> blog article.</p>
+        
+        <p><strong>Forum Size Guide</strong><br>
+        Curious about where to start with adidas Forum sizing? Look no further to learn about how the iconic sneakers fit before even trying them on.</p>
+
+</div>
+
+    <section class="adidas-club">
+        <div class="club-content">
+            <h2>JOIN OUR ADICLUB & GET 15% OFF</h2>
+            <button>SIGN UP FOR FREE</button>
+        </div>
+    </section>
+    <footer class="footer">
+
+        <div class="footer-column">
+            <h4>PRODUCTS</h4>
+            <ul>
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Accessories</li>
+                <li>Gift Cards</li>
+                <li>New Arrivals</li>
+                <li>Best Sellers</li>
+                <li>Release Dates</li>
+                <li>Black Friday Deals</li>
+                <li>Sale</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>SPORTS</h4>
+            <ul>
+                <li>Soccer</li>
+                <li>Running</li>
+                <li>Basketball</li>
+                <li>Football</li>
+                <li>Outdoor</li>
+                <li>Golf</li>
+                <li>Baseball</li>
+                <li>Tennis</li>
+                <li>Skateboarding</li>
+                <li>Training</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>COLLECTIONS</h4>
+            <ul>
+                <li>adicolor</li>
+                <li>Ultraboost</li>
+                <li>NMD</li>
+                <li>Forum</li>
+                <li>Superstar</li>
+                <li>Running Shoes</li>
+                <li>adilette</li>
+                <li>Stan Smith</li>
+                <li>adizero</li>
+                <li>Tiro</li>
+                <li>Cloudfoam Pure</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>SUPPORT</h4>
+            <ul>
+                <li>Help</li>
+                <li>Returns & Exchanges</li>
+                <li>Shipping</li>
+                <li>Order Tracker</li>
+                <li>Store Locator</li>
+                <li>Size Charts</li>
+                <li>Gift Card Balance</li>
+                <li>How to Clean Shoes</li>
+                <li>Running Shoe Finder</li>
+                <li>Bra Fit Guide</li>
+                <li>Sports Bra Finder</li>
+                <li>Breathing for Running</li>
+                <li>Promotions</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>COMPANY INFO</h4>
+            <ul>
+                <li>About Us</li>
+                <li>Student Discount</li>
+                <li>Military & Healthcare Discount</li>
+                <li>adidas Stories</li>
+                <li>adidas Apps</li>
+                <li>Sustainability</li>
+                <li>adiClub</li>
+                <li>Affiliates</li>
+                <li>Press</li>
+                <li>Careers</li>
+                <li>California Transparency in Supply Chains Act</li>
+                <li>Responsible Disclosure</li>
+                <li>Transparency in Coverage</li>
+                <li>Country Selector</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>FOLLOW US</h4>
+            <ul class="social-icons">
+                <li><a href="#">
+                        <box-icon name='facebook' type='logo'></box-icon>
+                    </a></li>
+                <li><a href="#">
+                        <box-icon name='instagram' type='logo'></box-icon>
+                    </a></li>
+                <li><a href="#">
+                        <box-icon name='twitter' type='logo'></box-icon>
+                    </a></li>
+                <li><a href="#">
+                        <box-icon name='youtube' type='logo'></box-icon>
+                    </a></li>
+                <li><a href="#">
+                        <box-icon name='tiktok' type='logo'></box-icon>
+                    </a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="product.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
