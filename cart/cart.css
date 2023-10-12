@@ -215,12 +215,79 @@ ul li {
     height: 24px;
 }
 
+.payment-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 200px;
+    margin-top:50px;
+    margin-bottom:50px; 
+}
 
+.left-panel {
+    width: 60%;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
 
+.your-bag {
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
+.total {
+    font-weight: bold;
+}
 
+.items-description {
+    margin-top: 10px;
+}
 
+.product-details {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+ 
+}
 
+.product-image img {
+    width: 200px;
+}
 
+.product-info {
+    flex: 1;
+    margin-left: 50px;
+}
 
-    
+.product-name {
+    font-weight: bold;
+}
+
+.product-size {
+    margin-top: 5px;
+}
+.product-price {
+    margin-top: 5px;
+}
+.size-selector {
+    display: flex;
+    align-items: center;
+}
+
+.size-selector select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.remove-product {
+    position: relative;
+    right:5px;
+    cursor: pointer;
+   
+}
+
+.right-panel {
+    width: 40%;
+    background-color: #c7c5c5;
+}
