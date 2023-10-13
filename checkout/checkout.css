@@ -266,25 +266,25 @@ ul li {
     margin-top: 20px;
 }
 
-.contact-input,
-.address-input
-.address-form{
-
-
+.contact-input input,
+.address-input input
+{
     padding: 10px;
     margin-top: 10px;
-   
     border-radius: 5px;
 }
 
 .name-input input {
     width: 48%;
-    margin-right: 4%;
+   
 }
 
 .contact-input input,
-.address-input input {
-    width: 100%;
+.address-input input,
+.name-input input
+ 
+{
+    width: 60%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
