@@ -32,3 +32,14 @@ function hideProductDetails(button) {
     const productDetails = button.parentElement;
     productDetails.style.display = "none";
 }
+
+const billingCheckbox = document.getElementById('billing-same');
+const addressForm = document.querySelector('.address-form');
+
+billingCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+        addressForm.style.display = 'none';
+    } else {
+        addressForm.style.display = 'block';
+    }
+});

@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="checkout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
-    <title>Adidas Cart</title>
+    <title>Adidas Check out</title>
 </head>
 
 <body>
@@ -62,76 +62,43 @@
 
     <div class="payment-container">
         <div class="left-panel">
-            <div class="your-bag">YOUR BAG</div>
-            <div class="total">TOTAL: (2 items) $525.28</div>
-            <div class="items-description">Items in your bag are not reserved — check out now to make them yours.</div>
-            <div class="product-details">
-                <div class="product-image">
-                    <img src="https://assetmanagerpim-res.cloudinary.com/images/9e99f8ca0ad74b82bacbaf8700918cae_9366/H03472_00_plp_standard.jpg?sh=364&strip=false&sw=364"
-                        alt="Product Image">
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-size">Size</div>
-                    <div class="product-price">Price</div>
-
-                    <div class="size-selector">
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-
-                    </div>
-
-                </div>
-                <div class="remove-product"  onclick="hideProductDetails(this)">
-                    <box-icon name='x'></box-icon>
-                </div>
+            <div class="contact-title">CONTACT</div>
+           
+            <div class="contact-input">
+                <input type="email" placeholder="Email">
             </div>
-            <div class="product-details">
-                <div class="product-image">
-                    <img src="https://assetmanagerpim-res.cloudinary.com/images/7ba0bf21d7c346df8038af5c01411e12_9366/HR1116_00_plp_standard.jpg?sh=364&strip=false&sw=364"
-                        alt="Product Image">
+            <div class="address-title">ADDRESS</div>
+            <div class="delivery-title">Delivery address</div>
+            <div class="address-input">
+                <div class="name-input">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
                 </div>
-                <div class="product-info">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-size">Size</div>
-                    <div class="product-price">Price</div>
-
-                    <div class="size-selector">
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-
-                    </div>
-
-                </div>
-                <div class="remove-product"  onclick="hideProductDetails(this)">
-                    <box-icon name='x'></box-icon>
-                </div>
+                <input type="text" placeholder="Address">
+                <input type="tel" placeholder="Phone Number">
+                
             </div>
-
+            
+            <div class="billing-checkbox">
+                <label>
+                    <input type="checkbox" id="billing-same" checked> Billing and delivery address are the same
+                </label>
+            </div>
+            <div class="address-form">
+                <div class="name-input">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <input type="text" placeholder="Address">
+                <input type="tel" placeholder="Phone Number">
+            </div>
         </div>
+
+
+
         <div class="right-panel">
-            <button class="checkout-button">Check Out</button>
-            <div class="order-summary">ORDER SUMMARY</div>
+           
+            <div class="order-summary">YOUR ORDER</div>
             <div class="summary-item">
                 <span>2 items:</span>
                 <span>$222.00</span>
@@ -157,9 +124,9 @@
                 <span>$248.64</span>
             </div>
         </div>
-        
+
     </div>
-  
+
     </div>
 
 
@@ -281,7 +248,7 @@
 
 
 
-    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 

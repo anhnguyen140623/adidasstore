@@ -226,7 +226,7 @@ ul li {
 .left-panel {
     width: 60%;
     padding: 20px;
-    background-color: #f0f0f0;
+   
 }
 
 .your-bag {
@@ -261,6 +261,7 @@ ul li {
 
 .product-name {
     font-weight: bold;
+    margin-top: 25px;
 }
 
 .product-size {
@@ -277,7 +278,8 @@ ul li {
 .size-selector select {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 5px;
+    padding: 20px;
+    margin-top:20px;
 }
 
 .remove-product {
@@ -289,5 +291,32 @@ ul li {
 
 .right-panel {
     width: 40%;
-    background-color: #c7c5c5;
+   
 }
+.checkout-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 190px;
+   margin-top:30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.order-summary {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.totaly {
+    font-size: 18px;
+    font-weight: bold;}
