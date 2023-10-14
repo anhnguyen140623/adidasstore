@@ -428,7 +428,7 @@ ul li {
 }
 
 .filter-content {
-    background-color: #FFFAFA;
+    /* background-color: #FFFAFA; */
     /* height: 100%; */
     overflow-y: auto;
     padding: 20px;
@@ -498,6 +498,11 @@ ul li {
     margin-left: 10px;
     transition: transform 0.3s;
 }
+.filter-arrower {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
 
 .sort-options {
     display: none;
@@ -508,27 +513,20 @@ ul li {
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    z-index: 1;
-}
+    z-index: 1;}
 
-.sort-option {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
+ 
 
-.sort-option:hover {
-    background-color: #f0f0f0;
-}
+
 
 .filter-item.active .filter-arrow {
     transform: rotate(180deg);
 }
-
-.filter-item.active .sort-options {
-    display: block;
+.filter-item.active .filter-arrower {
+    transform: rotate(180deg);
 }
+
+
 
 .size-table {
     cursor: pointer;
@@ -669,6 +667,7 @@ ul li {
     justify-content: space-between;
     margin-left: 50px;
     margin-right: 50px;
+   
 }
 
 .product {
@@ -819,6 +818,7 @@ ul li {
 /* ---------LONG------------- */
 .product_Container{
     display:flex;
+    margin-top:20px;
 }
 
 .image img{
@@ -837,12 +837,109 @@ ul li {
 }
 
 .left{
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     width: 70%;
 }
 
 .right{
     width: 30%;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
 }
 
+
+.adidas-club {
+    background-color: #ede735;
+    height: 16.5vh;
+    /* Cao 2.5cm */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club-content {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 24px;
+    /* Cỡ chữ lớn */
+    font-weight: bold;
+    /* Chữ đậm */
+    margin: 0;
+}
+
+button {
+
+    background-color: black;
+    /* Nền đen */
+    color: white;
+    /* Chữ trắng */
+    font-size: 16px;
+    /* Cỡ chữ */
+    font-weight: bold;
+    /* Chữ đậm */
+    padding: 1.5vh 4vh;
+    /* Cao 1.5cm và dài 4cm */
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Khoảng cách giữa dòng chữ và button */
+}
+
+/* ... CSS hiện tại ... */
+
+/* Thêm CSS cho phần Reviews */
+.review-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(105, 102, 102, 0.2);
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+
+.star-rating {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.star {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.review-content {
+    margin-bottom: 10px;
+}
+
+/* CSS cho phần Description */
+.description-content {
+    display: flex;
+}
+
+.description-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description-details {
+    padding: 0 20px;
+}
+
+.description-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* CSS cho phần Details */
+.product-details {
+    list-style: none;
+    padding: 0;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+}
+
+/* ... Các phần CSS khác ... */

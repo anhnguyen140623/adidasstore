@@ -77,93 +77,84 @@
 
             <div class="filter-content">
                 <div class="filter-header">
-                    <h2>Filter and Sort</h2>
-                    <span class="clear-all" onclick="clearAllFilters()">Clear All</span>
-                    <span class="close-button" onclick="closeFilterPanel()">
-                        <box-icon name='x-circle'></box-icon>
-                    </span>
+                    
+                    
+                    
                 </div>
                 <div class="filter-options">
+                    
+                    <!-- Phần Review -->
                     <div class="filter-item">
-                        <span class="filter-title">Sort by</span>
+                        <span class="filter-title">Reviews</span>
                         <span class="filter-arrower" onclick="toggleSortOptions()">&#9660;</span>
                         <div class="sort-options" style="display: none;">
-                            <div class="sort-option" onclick="selectSortOption(this)">Newest</div>
-                            <div class="sort-option" onclick="selectSortOption(this)">Price (High-low)</div>
-                            <div class="sort-option" onclick="selectSortOption(this)">Price (Low-high)</div>
-                            <div class="sort-option" onclick="selectSortOption(this)">Top Sellers</div>
+                            <!-- Placeholder cho reviews -->
+                            <div class="review-item">
+                                <span class="reviewer-name">John Doe</span>
+                                <div class="star-rating">
+                                    <span class="star" onclick="rateProduct(1)">&#9733;</span>
+                                    <span class="star" onclick="rateProduct(2)">&#9733;</span>
+                                    <span class="star" onclick="rateProduct(3)">&#9733;</span>
+                                    <span class="star" onclick="rateProduct(4)">&#9734;</span>
+                                    <span class="star" onclick="rateProduct(5)">&#9734;</span>
+                                </div>
+                                <p class="review-content">Great product! Love it.</p>
+                            </div>
+                            <!-- Placeholder cho reviews -->
+            
+                            <!-- Form nhập comment và đánh giá -->
+                            <div class="review-form">
+                                <input type="text" placeholder="Your name" id="reviewerName">
+                                <div class="star-rating">
+                                    <span class="star" onclick="rateProduct(1)">&#9733;</span>
+                                    <span class="star" onclick="rateProduct(2)">&#9733;</span>
+                                    <span class="star" onclick="rateProduct(3)">&#9733;</span>
+                                    <span class="star" onclick="rateProduct(4)">&#9734;</span>
+                                    <span class="star" onclick="rateProduct(5)">&#9734;</span>
+                                </div>
+                                <textarea placeholder="Your review" id="reviewContent"></textarea>
+                                <button onclick="submitReview()">Submit</button>
+                            </div>
+                            <!-- Form nhập comment và đánh giá -->
                         </div>
                     </div>
-    
+            
+                    <!-- Phần Description -->
                     <div class="filter-item">
-                        <span class="filter-title">Size</span>
+                        <span class="filter-title">Description</span>
                         <span class="filter-arrow" onclick="toggleSizeTable()">&#9660;</span>
                     </div>
                     <div class="size-table" id="sizeTable" style="display: none;">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td onclick="selectSize(this)">3</td>
-                                    <td onclick="selectSize(this)">3.5</td>
-                                    <td onclick="selectSize(this)">4</td>
-                                    <td onclick="selectSize(this)">4.5</td>
-                                    <td onclick="selectSize(this)">5</td>
-                                </tr>
-                                <tr>
-                                    <td onclick="selectSize(this)">6</td>
-                                    <td onclick="selectSize(this)">6.5</td>
-                                    <td onclick="selectSize(this)">7</td>
-                                    <td onclick="selectSize(this)">7.5</td>
-                                    <td onclick="selectSize(this)">8</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Placeholder cho phần description -->
+                        <div class="description-content">
+                            <div class="description-image">
+                                <img src="path_to_your_image" alt="Product Image">
+                            </div>
+                            <div class="description-details">
+                                <h2>Product Title</h2>
+                                <p>Nhận xét về sản phẩm...</p>
+                            </div>
+                        </div>
+                        <!-- Placeholder cho phần description -->
                     </div>
-    
-    
+            
+                    <!-- Phần Details -->
                     <div class="filter-item">
-                        <span class="filter-title">Color</span>
+                        <span class="filter-title">Details</span>
                         <span class="filter-arrow" onclick="toggleColorTable(this)">&#9660;</span>
                     </div>
                     <div class="color-table" id="colorTable">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="color-item" style="background-color: blue;"></td>
-                                    <td class="color-item" style="background-color: red;"></td>
-                                    <td class="color-item" style="background-color: black;"></td>
-                                    <td class="color-item" style="background-color: white;"></td>
-                                    <td class="color-item" style="background-color: yellow;"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Placeholder cho phần details -->
+                        <ul class="product-details">
+                            <li>- Chi tiết 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>- Chi tiết 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            <li>- Chi tiết 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat.</li>
+                            <li>- Chi tiết 4: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur.</li>
+                        </ul>
+                        <!-- Placeholder cho phần details -->
                     </div>
-    
-                    <div class="filter-item">
-                        <span class="filter-title">Brand</span>
-                        <span class="filter-arrowing" onclick="toggleBrandOptions()">&#9660;</span>
-                        <div class="brand-options" style="display: none;">
-                            <div class="brand-option">
-                                <input type="checkbox" id="perfomance"> <!-- Ô chọn -->
-                                <label for="perfomance">Performance</label>
-                            </div>
-                            <div class="brand-option">
-                                <input type="checkbox" id="sportwear"> <!-- Ô chọn -->
-                                <label for="sportwear">Sport Wear</label>
-                            </div>
-                            <div class="brand-option">
-                                <input type="checkbox" id="original"> <!-- Ô chọn -->
-                                <label for="original">Original</label>
-                            </div>
-                            <div class="brand-option">
-                                <input type="checkbox" id="essential"> <!-- Ô chọn -->
-                                <label for="essential">Essential</label>
-                            </div>
-                        </div>
-                    </div>
-    
-    
-    
                 </div>
             </div>
 
@@ -259,7 +250,12 @@
 
 
 
-
+    <section class="adidas-club">
+        <div class="club-content">
+            <h2>JOIN OUR ADICLUB & GET 15% OFF</h2>
+            <button>SIGN UP FOR FREE</button>
+        </div>
+    </section>
 
 
 

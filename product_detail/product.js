@@ -165,8 +165,7 @@ function changeActive(item) {
       const sortOptions = document.querySelector('.sort-options');
       const filterArrow = document.querySelector('.filter-arrower');
   
-      // Đóng bảng Size (nếu đang mở)
-      closeSizeTable();
+    
   
       // Kiểm tra trạng thái hiển thị của các mục con
       if (sortOptions.style.display === 'none' || sortOptions.style.display === '') {
@@ -183,7 +182,7 @@ function changeActive(item) {
       const sizeArrow = document.querySelector('.filter-arrow'); // Đổi tên biến thành sizeArrow
   
       // Đóng các mục con của Sort by (nếu đang mở)
-      closeSortOptions();
+ 
   
       // Kiểm tra trạng thái hiển thị của bảng Size
       if (sizeTable.style.display === 'none' || sizeTable.style.display === '') {
@@ -202,29 +201,13 @@ function changeActive(item) {
 
 
 
-function selectSortOption(option) {
-    // Xử lý khi chọn một mục con của Sort by
-    console.log(option.textContent);
-    // Thêm mã xử lý tùy ý ở đây
 
-    // Đóng các mục con của Sort by
-    closeSortOptions();
-}
-
-function selectSize(size) {
-    // Xử lý khi chọn một mục con của Size
-    console.log(size.textContent);
-    // Thêm mã xử lý tùy ý ở đây
-
-    // Đóng bảng Size
-    closeSizeTable();
-}
 
 // Đóng tất cả các mục con (trong trường hợp ấn vào mục Sort by)
 function closeSortOptions() {
     const sortOptions = document.querySelector('.sort-options');
     sortOptions.style.display = 'none';
-    const filterArrow = document.querySelector('.filter-arrow');
+    const filterArrow = document.querySelector('.filter-arrower');
     filterArrow.textContent = '\u25BC'; // Chuyển mũi tên xuống dưới
 }
 
@@ -295,3 +278,51 @@ function toggleBrandOptions() {
 function selectNumber(number) {
   document.getElementById('selected-item').textContent = number;
 }
+
+let rating = 0;
+
+function rateProduct(stars) {
+    rating = stars;
+    const starElements = document.querySelectorAll('.star');
+    starElements.forEach((star, index) => {
+        if (index < stars) {
+            star.innerHTML = '&#9733;';
+        } else {
+            star.innerHTML = '&#9734;';
+        }
+    });
+}
+
+function submitReview() {
+    const reviewerName = document.getElementById('reviewerName').value;
+    const reviewContent = document.getElementById('reviewContent').value;
+
+    if (!reviewerName || !reviewContent || rating === 0) {
+        alert('Please fill in all fields and provide a rating.');
+        return;
+    }
+
+    const reviewItem = document.createElement('div');
+    reviewItem.classList.add('review-item');
+    reviewItem.innerHTML = `
+        <span class="reviewer-name">${reviewerName}</span>
+        <div class="star-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+            <span class="star">&#9734;</span>
+        </div>
+        <p class="review-content">${reviewContent}</p>
+    `;
+
+    const reviewsContainer = document.querySelector('.sort-options');
+    reviewsContainer.insertBefore(reviewItem, reviewsContainer.firstChild);
+
+    // Reset form
+    document.getElementById('reviewerName').value = '';
+    document.getElementById('reviewContent').value = '';
+    rating = 0;
+}
+
+/* ... Các hàm xử lý sự kiện khác ... */
